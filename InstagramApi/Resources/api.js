@@ -25,11 +25,11 @@ for (var i=0, j=json.data.length; i<j; i++){
 var build = require("buildUI");
 build.buildUI(dataArray);
 //require database
-var db = require("database");
-db.save(myInsta);
+//var db = require("database");
+//db.save(myInsta);
 //require cloud
-var cloud = require("cloud");
-cloud.save(myInsta);
+//var cloud = require("cloud");
+//cloud.save(myInsta);
 		};
 xhr.onerror = function(e) {
 			

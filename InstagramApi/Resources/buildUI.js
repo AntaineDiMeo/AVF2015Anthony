@@ -1,4 +1,4 @@
-
+var api = require("api");
 //get the data function with build UI
 //android if statement
 	var buildUI = function(myInsta) {
@@ -37,9 +37,7 @@ var pHeight = Ti.Platform.displayCaps.platformHeight;
 			left: 10,
 			
 		});
-	//reload.addEventLister("click", function() {
-		
-	//});
+	
 
 var feedView = Ti.UI.createView({
 			height: 100,

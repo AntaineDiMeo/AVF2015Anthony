@@ -241,12 +241,12 @@ fashion.addEventListener("click", function() {
 
 beauty.addEventListener("click", function() {
 	
-	api.myData("https://api.instagram.com/v1/tags/bikini/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
+	api.myData("https://api.instagram.com/v1/tags/selfie/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
 	// build.buildUI;
 });
 news.addEventListener("click", function() {
 	
-	api.myData("https://api.instagram.com/v1/tags/420/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
+	api.myData("https://api.instagram.com/v1/tags/news/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
 	// build.buildUI;
 });
 
@@ -258,7 +258,7 @@ tech.addEventListener("click", function(){
 
 food.addEventListener("click", function(){
 
-	api.myData("https://api.instagram.com/v1/tags/fullsail/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
+	api.myData("https://api.instagram.com/v1/tags/food/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
 	//build.buildUI;
 });
 
