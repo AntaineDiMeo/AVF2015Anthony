@@ -25,7 +25,7 @@ var win = Ti.UI.createWindow({
 	Titanium.UI.LANDSCAPE_RIGHT,
 	Titanium.UI.PORTRAIT,
 	],
-	backgroundColor: "00CCCC",
+	backgroundColor: "9900CCCC",
 	navBarHidden: true
 });
 }
@@ -38,29 +38,29 @@ var winImage = Ti.UI.createView({
  
 var pWidth = Ti.Platform.displayCaps.platformWidth;
 var pHeight = Ti.Platform.displayCaps.platformHeight;
-
+console.log(pWidth);
 var itemCount = 50;
 
 var topView = Ti.UI.createView({
-	backgroundColor: "black",
+	backgroundColor: "99000000",
 	width: pWidth,
 	height: 100,
 	top: 0
 });
 var topView2 = Ti.UI.createView({
-	backgroundColor: "black",
+	backgroundColor: "99000000",
 	width: pWidth,
 	height: 100,
 	top: 0
 });
 var bottomView = Ti.UI.createView({
-	backgroundColor: "black",
+	backgroundColor: "99000000",
 	width: pWidth,
 	height: 125,
 	bottom: 0
 });
 var bottomView2 = Ti.UI.createView({
-	backgroundColor: "black",
+	backgroundColor: "99000000",
 	width: pWidth,
 	height: 125,
 	bottom: 0
@@ -68,28 +68,24 @@ var bottomView2 = Ti.UI.createView({
 
 
 var location = Ti.UI.createView({
-	width: 384,
+	width: 275,
 	height: 125,
-	borderColor: "99FFFFFF",
-	borderWidth: 2,
+	backgroundColor: "99383A3A",
+	borderColor: "black",
+	borderWidth: 4,
 	
 });
 var locationText = Ti.UI.createLabel({
-	font : {fontFamily : 'futura', fontSize : 30,},
+	font : {fontFamily : 'futura', fontSize : 40,},
 	color: "ffffff",
 	text: "Use Location"
 });
 
 
-location.add(locationText);
-bottomView.add(location);
-//get geo button event listener
-location.addEventListener("click", geo.getGeo);
-
 var instaStory = Ti.UI.createLabel({
 	text: "InstaStory",
-	font : {fontFamily : 'Futura', fontSize : 70,},
-	color: "FEFCF8"
+	font : {fontFamily : 'Futura', fontWeight: "Bold", fontSize : 72,},
+	color: "FEFCF8",
 });
 
 var sports = Ti.UI.createView({
@@ -97,8 +93,8 @@ var sports = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 100,
-	borderColor: "99FFFFFF",
-	borderWidth: 1,
+	borderColor: "black",
+	borderWidth: 2,
 	category : "sports"
 });
 var sportsText = Ti.UI.createLabel({
@@ -112,8 +108,8 @@ var fashion = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 200,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var fashionText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -126,8 +122,8 @@ var beauty = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 300,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var beautyText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -140,8 +136,8 @@ var news = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 400,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var newsText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -154,8 +150,8 @@ var tech = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 500,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var techText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -168,8 +164,8 @@ var food = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 600,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var foodText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -182,8 +178,8 @@ var vGames = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 700,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var vGamesText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -196,8 +192,8 @@ var music = Ti.UI.createView({
 	height: 100,
 	backgroundColor: "99001F1F",
 	top: 800,
-	borderColor: "99FFFFFF",
-	borderWidth: 1
+	borderColor: "black",
+	borderWidth: 2
 });
 var musicText = Ti.UI.createLabel({
 	font : {fontFamily : 'Futura', fontSize : 40,},
@@ -252,7 +248,7 @@ news.addEventListener("click", function() {
 
 tech.addEventListener("click", function(){
 
-	api.myData("https://api.instagram.com/v1/tags/tech/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
+	api.myData("https://api.instagram.com/v1/tags/technology/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
 	//build.buildUI;
 });
 
@@ -272,6 +268,14 @@ music.addEventListener("click", function(){
 	
 	api.myData("https://api.instagram.com/v1/tags/music/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf");
 	//build.buildUI;
+});
+
+location.add(locationText);
+bottomView.add(location);
+//get geo button event listener
+location.addEventListener("click", function() {
+	//api.myData("https://api.instagram.com/v1/tags/life/media/recent?client_id=3da7bfe44aa24c68a4194004466803cf&lat=28.53843&lng=-81.37896");
+	geo.getGeo();
 });
 
 

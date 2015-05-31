@@ -16,8 +16,9 @@ var read = function() {
 	dbRows.close();
 	db.close();
 	
-	var buildUI = require("buildUI");
-	buildUI.buildUI(dbArray);
+	//reuqire build ui
+var build = require("buildUI");
+build.buildUI(dbArray);
 };
 //save function
 var save = function (instaInfo){

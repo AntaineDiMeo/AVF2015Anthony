@@ -15,7 +15,7 @@ var loginCloud = function() {
 			
 			//userID = e.users[0].id;
 		} else {
-			alert("Error" + e.message);
+			
 		}
 	});
 };

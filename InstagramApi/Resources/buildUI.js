@@ -21,29 +21,34 @@ var pHeight = Ti.Platform.displayCaps.platformHeight;
 //all the adds to the window
 		var backButton = Ti.UI.createView({
 			backgroundImage: "home.png",
-			width: 75,
-			height: 75,
-				bottom:3,
-			
+			width: 70,
+			height: 70,
+				bottom:10,
+				left: 10
 		});
 	
-		var reload = Ti.UI.createButton({
-			backgroundImage: "reload.png",
-			color: 'black',
-     		systemButton : Titanium.UI.iPhone.SystemButton.REFRESH,
-			width: 60,
-			height: 60,
-			bottom:12,
-			left: 10,
-			
+		var circle = Ti.UI.createView({
+			backgroundColor: "99606161",
+			width: 75,
+			height: 75,
+			borderRadius: 37.5,
+			borderColor: "#222222",
 		});
+		var instaStory = Ti.UI.createLabel({
+		text: "InstaStory",	
+		font : {fontFamily : 'Futura', fontWeight: "Bold", fontSize : 72,},
+		color: "FEFCF8",
+	
+});
+
 	
 
 var feedView = Ti.UI.createView({
 			height: 100,
 			width:pWidth,
 			top: 0,
-			backgroundColor: "99000000",
+			borderColor: "99ffffff",
+			backgroundColor: "50000000",
 		});
 		var scrollView = Ti.UI.createScrollView({
 			layout: "vertical",
@@ -56,7 +61,7 @@ var feedView = Ti.UI.createView({
 		for (i=0; i < myInsta.length; i++) {
 			
 		var line = Ti.UI.createView({
-			top: 25,
+			top: 30,
 			width: pWidth,
 			height: 2,
 			borderColor: "99ffffff",
@@ -85,17 +90,20 @@ var feedView = Ti.UI.createView({
 		});
 		var images = Ti.UI.createImageView({
 			top: 0,
-			width: pWidth,
+			height: 650,
+			width: 748,
 			image: myInsta[i].images,
 			bordercolor: "black",
 			borderWidth: "2"
 		});
 		var caption = Ti.UI.createLabel({
-			top: 15,
+			top: 20,
+			left: 10,
 			text: myInsta[i].caption,
 			font : {fontFamily : 'futura', fontSize : 20},
 			color: "#B2E0F0" 
 		});
+		
 		
 		
 		scrollView.add(usernameView);
@@ -118,8 +126,9 @@ var feedView = Ti.UI.createView({
 //open data window
 dataWindow.add(feedView);
 
-feedView.add(reload);
+feedView.add(instaStory);
 feedView.add(backButton);
+backButton.add(circle);
 dataWindow.add(scrollView);
 		dataWindow.open();
 //close data window

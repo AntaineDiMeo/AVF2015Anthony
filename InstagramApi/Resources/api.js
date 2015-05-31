@@ -11,6 +11,16 @@ var myData = function(url, lng, lat) {
 
 for (var i=0, j=json.data.length; i<j; i++){
 	//myinsta 
+	if (Ti.Platform.osname === "android") {
+		var myInsta = {
+				url : url,
+			username: json.data[i].caption.from.username,
+			profilePicture: json.data[i].caption.from.profile_picture,
+			images: json.data[i].images.thumbnail.url,
+			caption: json.data[i].caption.text,
+			
+		};
+		 } else {
 			var myInsta = {
 				url : url,
 			username: json.data[i].caption.from.username,
@@ -18,18 +28,20 @@ for (var i=0, j=json.data.length; i<j; i++){
 			images: json.data[i].images.standard_resolution.url,
 			caption: json.data[i].caption.text,
 		};
+		}
 	
 		dataArray.push(myInsta);
 }
-//reuqire build ui
-var build = require("buildUI");
-build.buildUI(dataArray);
+
+
 //require database
-//var db = require("database");
-//db.save(myInsta);
+var db = require("database");
+db.save(dataArray);
+
 //require cloud
-//var cloud = require("cloud");
-//cloud.save(myInsta);
+var cloud = require("cloud");
+cloud.save(myInsta);
+
 		};
 xhr.onerror = function(e) {
 			

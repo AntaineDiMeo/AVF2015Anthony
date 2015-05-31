@@ -1072,7 +1072,8 @@ containing a value of this type.
         public static final int background=0x7f020058;
         public static final int btn_check_buttonless_on_64=0x7f020059;
         public static final int btn_more_64=0x7f02005a;
-        public static final int disclosure_64=0x7f02005b;
+        public static final int default_d44e27d97b=0x7f02005b;
+        public static final int disclosure_64=0x7f02005c;
     }
     public static final class id {
         public static final int action_bar=0x7f09001c;

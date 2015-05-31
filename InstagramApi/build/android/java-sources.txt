@@ -1,0 +1,7 @@
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/com/fullsail/ApplicationStylesheet.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/com/fullsail/InstagramapiActivity.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/com/fullsail/InstagramapiAppInfo.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/com/fullsail/InstagramapiApplication.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/com/fullsail/R.java"
+"/Users/anthonydimeo/Desktop/Titanium/InstagramApi/build/android/gen/ti/modules/titanium/ui/R.java"
